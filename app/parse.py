@@ -61,7 +61,7 @@ def start_driver() -> WebDriver:
     return driver
 
 
-def write_products_to_csv(products: Product, name: str = "results") -> None:
+def write_products_to_csv(products: list[Product], name: str = "results") -> None:
     with open(f"{name}.csv", "w") as f:
         print(f"Створюю {name}.csv")
         writer = csv.writer(f)
